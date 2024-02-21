@@ -1,0 +1,411 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200;0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,800;0,8..60,900;1,8..60,200;1,8..60,300;1,8..60,400;1,8..60,500;1,8..60,600;1,8..60,700;1,8..60,800;1,8..60,900&family=Special+Elite&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap');
+
+
+/* Wildcard selector - applies to all.  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*general styles*/
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /*generic project styles*/
+    color: #000000;
+    font-family: 'Special Elite', 'Courier New', Courier, monospace;
+    background: rgb(110, 10, 10);
+}
+
+
+/*--------------------------header --------------------------*/
+.flexing{
+    display: flex;
+    background: rgba(134, 12, 12, 0.643);
+}
+
+
+header {
+    background-color: none;
+    padding: 1rem;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+}
+
+/* links inside the header*/
+header a {
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+
+h3 {
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+
+
+/* ensuring the navigation is responsive */
+.navposition {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color: rgb(134 12 12);
+
+    z-index: 99;
+
+    left: 0;
+    width: 100%;
+    padding: 0.5em 1rem;
+
+    background-color: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* navigation button stylings */
+.navigation-main {
+    text-decoration: none;
+    padding: 1% 3%;
+    background-color: black;
+    color: white;
+}
+
+.navigation-l {
+    text-decoration: none;
+    padding: 1% 3%;
+}
+
+.navigation-l:hover {
+    color: white;
+}
+
+/*--------------------------main --------------------------*/
+main {
+    flex: 1 0 auto;
+    /* make main take up as surplus space in body to push footer down. */
+    margin-right: 15%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/*the photos section*/
+#photos{
+    display: flex;
+    flex-direction: column;
+}
+
+figure > img{
+    width:100%;
+    margin: 10% 0;
+}
+
+figure{
+    margin: 10%;
+}
+
+/*the bio section*/
+#container{
+    position: relative;
+    margin: 10% 0;
+    width:100%;
+}
+
+#biography{
+    border: white double;
+    padding: 20%;
+    border-radius: 30% 90% 28% / 20% 40% 70%;
+    color: white;
+}
+
+/*the contact section*/
+#contact{
+    width: 100%;
+    background: rgb(196, 90, 90);
+    order: 3;
+    margin: 5%;
+}
+
+.klass{
+    display: flex;
+    padding: 1em 3%;
+    flex-direction: column;
+}
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    order: 4;
+    flex-grow: 1;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: whitesmoke;
+}
+
+
+
+
+/* Media query: tablets and larger (768px and up) */
+@media screen and (min-width: 678px) {
+
+    /* nav changes to all be on the same line */
+    header {
+        /*background-color: #f7f0e4;/*/
+        padding: 1rem;
+        position: fixed;
+        z-index: 99;
+        box-shadow: 0 2px 2px #3a3a3a;
+        width: 100%;
+        display: inline-flex;
+    }
+
+    header a {
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        color: inherit;
+        letter-spacing: 1.5px;
+    }
+
+    .navposition {
+        position: relative;
+        display: flex;
+        z-index: 98;
+        width: 100%;
+        padding: 0.5em 1rem;
+        box-shadow: none;
+        justify-content: flex-start;
+
+    }
+
+    /* FOR THE LOGO */
+    #topheader {
+        width: 15%;
+        margin: 0;
+    }
+
+    /* footer changes so email sign up shows on left, social media on right */
+    footer {
+        background: lightcoral;
+        display: flex;
+        align-items: center;
+        padding: 1em 3%;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+
+    #emailicon {
+        display: none;
+    }
+
+    #social-networks {
+        text-align: center;
+        padding: 20px 0;
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        width: 28%;
+        right: 0;
+        margin: auto;
+        margin-right: 0;
+        gap: 8%;
+    }
+
+    #social-networks:hover {
+        opacity: 0.6;
+
+    }
+
+    #newslettersignup {
+        padding: 20px 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #headlogo {
+        margin: 0;
+    }
+
+    /* welcome section*/
+    #welcome2 {
+        background: pink;
+        text-align: center;
+        padding: 3%;
+        border-radius: 30% 70% 70% 30% / 30% 60% 49% 70%;
+        width: 20%;
+        margin: 0;
+    }
+
+    #welcome3 {
+        padding: 3%;
+        width: 20%;
+        margin: 30vh 0 0 40vw;
+    }
+
+    #aboutusdiv {
+        border-width: 40px;
+        width: 80%;
+        padding: 10%;
+        margin: auto;
+    }
+
+    #grainsvisit {
+        width: 30vh;
+        height: 30vh;
+        margin-left: 12%
+    }
+
+    /*hughs section*/
+    .about {
+        visibility: hidden;
+    }
+
+    div:hover+.about {
+        visibility: visible;
+    }
+
+    #hughsbackground{
+        padding: 10% 5% 5%;
+    }
+
+    .hughscontainerp{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+        align-items: center;
+        border: none;
+        height: min-content;
+        padding: 5vw;
+        flex-wrap: nowrap;
+        background: white;
+        margin: 2%;
+        border-radius: 20% 0;
+        align-content: center;
+        flex-direction: row;
+        
+    }
+
+    h4{
+        font-size: larger;
+    }
+
+    #brewtitle{
+        font-size:3em
+    }
+
+    #brewsbackground {
+        padding: 10% 5% 5%;
+    }
+
+    .creationscontainer{
+        display: flex;
+        justify-content: center;
+        background-color: #d0f8d0;
+        border-radius: 30% 70% 70% 30% / 30% 30% 39% 70%;
+        border-color: black;
+        border-style: double;
+        border-width: 10vw;
+        border-color: white;
+        align-content: center;
+        flex-wrap: nowrap;
+        align-items: center;
+        flex-direction: row;
+        margin: 5%;
+    }
+
+    .box{
+        padding: 8%;
+    }
+    
+    /* exp section*/
+    .farmvisit{
+        bottom: 20vh;
+        width: 30%;
+    }
+
+    #form{
+        margin: 10%;
+        margin-top: 20%;
+    }
+}
+
+
+
+
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #aboutusdiv {
+        width: 79%;
+        padding: 8%;
+        margin: auto;
+        font-size: larger;
+    }
+
+    #grainsvisit {
+        height: 30vh;
+        width: 30vh;
+        margin-left: 12%;
+
+    }
+
+    #brewsbackground {
+        padding: 10% 5% 5%;
+    }
+
+    
+
+    .order{
+        margin: 30%;
+    }
+
+    .order:hover{
+        margin: 30%;
+    }
+
+
+}
+
+
+
+
+/*notes
+
+sign up ref: https: //www.w3schools.com/howto/howto_css_newsletter.asp
+
+
+*/
